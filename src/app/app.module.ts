@@ -1,3 +1,4 @@
+import { MaterialModule } from './material.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -13,6 +14,8 @@ import { SocialComponent } from './social/social.component';
 import { StudyComponent } from './study/study.component';
 import { HomeComponent } from './home/home.component';
 import { PostComponent } from './post/post.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 
 
@@ -32,7 +35,9 @@ import { PostComponent } from './post/post.component';
     PostComponent,
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
+    MaterialModule,
     RouterModule.forRoot([
       {path:'home',component: HomeComponent },
       {path:'fashion',component: FashionComponent },
