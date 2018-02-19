@@ -15,8 +15,13 @@ import { StudyComponent } from './study/study.component';
 import { HomeComponent } from './home/home.component';
 import { PostComponent } from './post/post.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
-
+import { SignupComponent } from './auth/signup/signup.component';
+import { LoginComponent } from './auth/login/login.component';
+import { CurrentStudyComponent } from './study/current-study/current-study.component';
+import { NewStudyComponent } from './study/new-study/new-study.component';
+import { PastStudyComponent } from './study/past-study/past-study.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -33,10 +38,17 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     StudyComponent,
     HomeComponent,
     PostComponent,
+    SignupComponent,
+    LoginComponent,
+    CurrentStudyComponent,
+    NewStudyComponent,
+    PastStudyComponent,
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    FlexLayoutModule,
+    FormsModule,
     MaterialModule,
     RouterModule.forRoot([
       {path:'home',component: HomeComponent },
@@ -48,7 +60,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
       {path:'social',component: SocialComponent },
       {path:'study',component: StudyComponent },
       {path:'post',component: PostComponent },
+      {path:'login',component: LoginComponent },
       {path:'technology',component: TechnologyComponent },
+      {path:'signup',component: SignupComponent },
     ]),
     SidebarModule.forRoot()  
   ],
